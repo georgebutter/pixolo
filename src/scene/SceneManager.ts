@@ -43,7 +43,8 @@ export class SceneManager {
   public boot(sceneName: string) {
     const index = this._sceneKeys.indexOf(sceneName);
     if (index === -1) {
-      throw new Error(`Scene with name ${sceneName} not found!`);
+  
+      throw new Error(`Scene with name ${sceneName} not found! Available scenes: ${this._sceneKeys.join(', ')}`);
     }
     this.currentScene = this._scenes[index];
   }

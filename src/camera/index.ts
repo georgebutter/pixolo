@@ -1,6 +1,6 @@
-import { Game } from "../game";
-import { GameObject } from "../gameObject";
-import { Vector2 } from "../scalars/vector2";
+import { Game } from "../game/index.ts";
+import { GameObject } from "../gameObject/index.ts";
+import { Vector2 } from "../scalars/vector2.ts";
 
 export class Camera {
   private _game: Game;

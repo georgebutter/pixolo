@@ -1,5 +1,5 @@
-import { Game } from "../game";
-import { GameObject } from "../gameObject";
+import { Game } from "../game/index.ts";
+import { GameObject } from "../gameObject/index.ts";
 
 export class Inputs {
   private _game: Game;

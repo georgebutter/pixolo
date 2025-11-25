@@ -1,0 +1,28 @@
+{
+  "type": "module",
+  "name": "pixolo",
+  "version": "0.0.1",
+  "description": "Lightweight Canvas 2D rendering library",
+  "main": "dist/pixolo.umd.js",
+  "module": "dist/pixolo.es.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/pixolo.es.js",
+      "require": "./dist/pixolo.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc --emitDeclarationOnly && npm link",
+    "prepublish": "vite build"
+  },
+  "author": "George Butter",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.1"
+  }
+}

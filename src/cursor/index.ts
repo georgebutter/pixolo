@@ -1,4 +1,4 @@
-import { Game } from "../game";
+import { Game } from "../game/index.ts";
 
 export class CursorManager {
   private _cursor: CursorKeys = 'default';

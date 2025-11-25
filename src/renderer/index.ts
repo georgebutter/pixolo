@@ -1,10 +1,8 @@
-import { Game } from "../game";
-import { GameObject } from "../gameObject";
-import { generateRandomId } from "@/utils/string";
+import { Game } from "../game/index.ts";
+import { GameObject } from "../gameObject/index.ts";
 
 export class Renderer {
   private _game: Game;
-  private _id = generateRandomId();
   constructor(game: Game) {
     this._game = game;
     this.paintObjects = this.paintObjects.bind(this);

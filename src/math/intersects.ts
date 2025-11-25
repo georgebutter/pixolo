@@ -1,4 +1,4 @@
-import { Vector2 } from "../scalars/vector2";
+import { Vector2 } from "../scalars/vector2.ts";
 
 
 export const intersects = (a: Array<Vector2>, b: Array<Vector2>) => {

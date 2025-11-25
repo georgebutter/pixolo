@@ -1,7 +1,8 @@
-import { GameObjectConfig } from ".";
-import { pointsToPath2D } from "../drawing/pointsToPath2D";
-import { Vector2 } from "../scalars/vector2";
-import { Shape, ShapeGameObject } from "./Shape";
+import type { GameObjectConfig } from "./index.ts";
+import { pointsToPath2D } from "../drawing/pointsToPath2D.ts";
+import { Vector2 } from "../scalars/vector2.ts";
+import type { Shape } from "./Shape.ts";
+import { ShapeGameObject } from "./Shape.ts";
 
 export class RectangleGameObject extends ShapeGameObject {
   

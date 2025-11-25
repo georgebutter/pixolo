@@ -1,5 +1,5 @@
-import { Vector2 } from "../scalars/vector2";
-import { intersects } from "./intersects";
+import { Vector2 } from "../scalars/vector2.ts";
+import { intersects } from "./intersects.ts";
 
 export const checkCollision = (a: Array<Array<Vector2>>, b: Array<Array<Vector2>>): boolean => {
   for (let i = 0; i < a.length; i++) {

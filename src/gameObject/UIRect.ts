@@ -1,7 +1,8 @@
-import { GameObject, GameObjectConfig } from ".";
-import { pointsToPath2D } from "../drawing/pointsToPath2D";
-import { Vector2 } from "../scalars/vector2";
-import { Shape } from "./Shape";
+import { GameObject } from "./index.ts";
+import type { GameObjectConfig } from "./index.ts";
+import { pointsToPath2D } from "../drawing/pointsToPath2D.ts";
+import { Vector2 } from "../scalars/vector2.ts";
+import type { Shape } from "./Shape.ts";
 
 export class UIRect extends GameObject {
   _matchWindowSize: boolean = false;

@@ -1,5 +1,5 @@
-import { GameObject } from "../gameObject";
-import { Vector2 } from "../scalars/vector2";
+import { GameObject } from "../gameObject/index.ts";
+import { Vector2 } from "../scalars/vector2.ts";
 
 export class Tween {
   private _target: GameObject;

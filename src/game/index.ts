@@ -1,13 +1,14 @@
-import { GameAudio } from "../audio";
-import { CacheManager } from "../cache";
-import { Camera } from "../camera";
-import { Canvas } from "../canvas";
-import { CursorConfig, CursorKeys, CursorManager } from "../cursor";
-import { EventManager } from "../events";
-import { Inputs } from "../inputs";
-import { Renderer } from "../renderer";
-import { SceneClassAsParameter } from "../scene";
-import { SceneManager } from "../scene/SceneManager";
+import { GameAudio } from "../audio/index.ts";
+import { CacheManager } from "../cache/index.ts";
+import { Camera } from "../camera/index.ts";
+import { Canvas } from "../canvas/index.ts";
+import type { CursorConfig, CursorKeys } from "../cursor/index.ts";
+import { CursorManager } from "../cursor/index.ts";
+import { EventManager } from "../events/index.ts";
+import { Inputs } from "../inputs/index.ts";
+import { Renderer } from "../renderer/index.ts";
+import type { SceneClassAsParameter } from "../scene/index.ts";
+import { SceneManager } from "../scene/SceneManager.ts";
 
 export class Game {
   private _status: GameStatus;

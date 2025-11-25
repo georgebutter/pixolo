@@ -1,4 +1,4 @@
-import { Vector2 } from "../scalars/vector2";
+import { Vector2 } from "../scalars/vector2.ts";
 
 export class Canvas {
   private _canvas: HTMLCanvasElement;

@@ -1,7 +1,8 @@
 
 
-import { GameObject, GameObjectConfig } from ".";
-import { Vector2 } from "../scalars/vector2";
+import { GameObject } from "./index.ts";
+import type { GameObjectConfig } from "./index.ts";
+import { Vector2 } from "../scalars/vector2.ts";
 
 export abstract class TextGameObject extends GameObject {
 

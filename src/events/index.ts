@@ -1,4 +1,4 @@
-import { Game } from "../game";
+import { Game } from "../game/index.ts";
 
 export class EventManager {
   private _events: Map<EventKey, EventFn<any>[]>;

@@ -1,11 +1,11 @@
 
-import { CacheManager } from "../cache";
-import { EventFn, EventKey } from "../events";
-import { Game } from "../game";
-import { GameObject } from "../gameObject";
-import { intersects } from "../math/intersects";
-import { Vector2 } from "../scalars/vector2";
-import { SceneManager } from "./SceneManager";
+import { CacheManager } from "../cache/index.ts";
+import type { EventFn, EventKey } from "../events/index.ts";
+import { Game } from "../game/index.ts";
+import { GameObject } from "../gameObject/index.ts";
+import { intersects } from "../math/intersects.ts";
+import { Vector2 } from "../scalars/vector2.ts";
+import { SceneManager } from "./SceneManager.ts";
 
 export interface Scene {
   update?(delta: number): void;
@@ -164,11 +164,11 @@ export abstract class Scene {
     return this.game.loadAudio(...args);
   }
 
-  public on(key: EventKey, callback: EventFn) {
+  public on(key: EventKey, callback: EventFn<any>) {
     this.game.events.on(key, callback);
   }
 
-  public off(key: EventKey, callback: EventFn) {
+  public off(key: EventKey, callback: EventFn<any>) {
     this.game.events.off(key, callback);
   }
 

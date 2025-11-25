@@ -1,5 +1,5 @@
-import { Scene, SceneClassAsParameter } from ".";
-import { Game } from "../game";
+import type { Scene, SceneClassAsParameter } from "./index.ts";
+import { Game } from "../game/index.ts";
 
 export class SceneManager {
   private _game: Game;

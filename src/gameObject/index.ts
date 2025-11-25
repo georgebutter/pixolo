@@ -1,9 +1,9 @@
-import { AnimationManager } from "../animation/AnimationManager";
-import { Game } from "../game";
-import { intersects } from "../math/intersects";
-import { Vector2 } from "../scalars/vector2";
-import { Scene } from "../scene";
-import { Shape } from "./Shape";
+import { AnimationManager } from "../animation/AnimationManager.ts";
+import { Game } from "../game/index.ts";
+import { intersects } from "../math/intersects.ts";
+import { Vector2 } from "../scalars/vector2.ts";
+import type { Scene } from "../scene/index.ts";
+import type { Shape } from "./Shape.ts";
 
 export interface GameObject {
   update?(delta: number): void;

@@ -1,4 +1,10 @@
-import { DrawConfig } from "./rectangle";
+export type DrawConfig = {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  rotation: number;
+}
 
 export const rotatePath2D = (path: Path2D, config: DrawConfig): Path2D => {
   const p2 = new Path2D();

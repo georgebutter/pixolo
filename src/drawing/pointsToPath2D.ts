@@ -1,4 +1,4 @@
-import { Vector2 } from "../scalars/vector2";
+import { Vector2 } from "../scalars/vector2.ts";
 
 export const pointsToPath2D = (points: Array<Vector2>): Path2D => {
   const path = new Path2D();

@@ -1,5 +1,5 @@
 
-import { GameObject } from "../gameObject";
+import { GameObject } from "../gameObject/index.ts";
 
 
 export class AnimationManager {

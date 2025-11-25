@@ -16,7 +16,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc --emitDeclarationOnly && npm link",
-    "prepublish": "vite build && tsc --emitDeclarationOnly"
+    "prepublish": "vite build && tsc --emitDeclarationOnly",
+    "bump": "vite build && tsc --emitDeclarationOnly && npm version patch && git push && git push --tags && npm publish"
   },
   "author": "George Butter",
   "license": "ISC",

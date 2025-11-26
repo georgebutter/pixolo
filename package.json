@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "pixolo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Lightweight Canvas 2D rendering library",
   "main": "dist/pixolo.umd.js",
   "module": "dist/pixolo.es.js",

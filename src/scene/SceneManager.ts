@@ -18,9 +18,9 @@ export class SceneManager {
       return scene;
     });
     this._scenes = scenesMap;
-    const firstScene = scenesMap[0]
+    const firstScene = scenesMap[0];
     this._currentScene = firstScene;
-    const names = scenes.map((s) => s.name);
+    const names = scenesMap.map((scene) => scene.name);
     this._sceneKeys = names;
     this._sceneKey = firstScene.name;
   }

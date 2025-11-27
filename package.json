@@ -14,10 +14,10 @@
     }
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && tsc --emitDeclarationOnly && npm link",
-    "prepublish": "vite build && tsc --emitDeclarationOnly",
-    "bump": "vite build && tsc --emitDeclarationOnly && npm version patch && git push && git push --tags && npm publish"
+    "dev": "concurrently \"vite build --watch\" \"tsc --watch --emitDeclarationOnly\"",
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "prepublish": "npm run build",
+    "bump": "npm run build && npm version patch && git push && git push --tags && npm publish"
   },
   "author": "George Butter",
   "license": "ISC",

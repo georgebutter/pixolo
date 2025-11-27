@@ -29,9 +29,9 @@ export class Game {
   private _audio: GameAudio = new GameAudio(this);
 
   constructor(_config: Config = {}) {
-    const { width, height, ...config} = _config;
+    const { width, height, scaleToWindow, scaleTo, ...config} = _config;
     this._status = "pending";
-    this._canvas = new Canvas({id: config?.canvasId, width, height, scaleToWindow: true});
+    this._canvas = new Canvas({id: config?.canvasId, width, height, scaleTo, scaleToWindow});
     this._inputs = new Inputs(this);
     this._scenes = new SceneManager({
       game: this,
@@ -179,6 +179,8 @@ type Config = {
   height?: number
   scenes?: Array<SceneClassAsParameter>
   cursor?: CursorConfig;
+  scaleTo?: HTMLElement;
+  scaleToWindow?: boolean;
 }
 
 type GameStatus = "pending" | "loading" | "running" | "paused" | "stopped"

@@ -6,7 +6,7 @@ export class Canvas {
   private _width: number;
   private _height: number;
 
-  constructor({id = "canvas", width, height, scaleToWindow}: Config) {
+  constructor({id = "canvas", width, height, scaleToWindow, scaleTo}: Config) {
     const canvasRef = document.getElementById(id) as HTMLCanvasElement;
     if (!canvasRef) {
       throw new Error(`Canvas not found! Have you provided the correct canvas ID? ${id}`)
@@ -24,6 +24,11 @@ export class Canvas {
       this.setCanvasToWindowSize();
       window.addEventListener("resize", () => {
         this.setCanvasToWindowSize();
+      });
+    } else if (scaleTo) {
+      this.setCanvasToElementSize(scaleTo);
+      window.addEventListener("resize", () => {
+        this.setCanvasToElementSize(scaleTo);
       });
     }
   }
@@ -68,6 +73,11 @@ export class Canvas {
     this.height = window.document.body.clientHeight;
   }
 
+  private setCanvasToElementSize(element: HTMLElement) {
+    this.width = element.clientWidth;
+    this.height = element.clientHeight;
+  }
+
   public center() {
     return new Vector2(this.width / 2, this.height / 2);
   }
@@ -78,4 +88,5 @@ type Config = {
   width?: number;
   height?: number;
   scaleToWindow?: boolean;
+  scaleTo?: HTMLElement;
 }
